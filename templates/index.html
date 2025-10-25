@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 K-Means Clustering for Historical Weather Data</h1>
+        <p class="subtitle">Clustering to identify distinct weather states (Temperature, Humidity, Wind Speed).</p>
+        
+        <div class="controls">
+            <label for="k_input">Select Number of Clusters (K):</label>
+            <input type="number" id="k_input" value="4" min="2" max="10">
+            <button onclick="runClustering()">Run K-Means</button>
+        </div>
+
+        <hr>
+
+        <div class="results-section">
+            <h2>✨ Clustering Results (Temperature vs. Humidity)</h2>
+            <div class="plot-container">
+                <canvas id="scatterPlot"></canvas>
+            </div>
+            <p class="note">Plot shows clusters based on 'Temperature (C)' and 'Humidity'.</p>
+        </div>
+
+        <hr>
+        
+        <div class="analysis-section">
+            <h2>📝 Cluster Centroid Analysis</h2>
+            <div id="centroids-table-container">
+                <table id="centroids-table">
+                    </table>
+            </div>
+
+            <div class="tts-box">
+                <h3>🗣️ Text-to-Speech Analysis</h3>
+                <p id="analysis-text-output" class="analysis-text-placeholder">Run the clustering to generate the AI analysis...</p>
+                <button id="tts-button" onclick="playAnalysis()" disabled>Play Analysis</button>
+                <audio id="audio-player" controls style="display: none;"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

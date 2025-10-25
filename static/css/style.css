@@ -1,0 +1,28 @@
+/* static/css/style.css */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+h1 { color: #0056b3; }
+.subtitle { color: #666; }
+.controls { margin-bottom: 20px; }
+#k_input { padding: 8px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+button:hover:not(:disabled) { background-color: #0056b3; }
+button:disabled { background-color: #a0a0a0; cursor: not-allowed; }
+.plot-container { max-width: 800px; margin: 20px auto; }
+#centroids-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+#centroids-table th, #centroids-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+.tts-box { background-color: #e9f7ff; padding: 20px; border-radius: 6px; margin-top: 20px; }
+.analysis-text-placeholder { font-style: italic; color: #555; }

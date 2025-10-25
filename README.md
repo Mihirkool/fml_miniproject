@@ -50,18 +50,31 @@ The results are displayed on a **web-based dashboard** built with Flask and Char
 
 weather-forecast-dashboard/
 ├── app.py # Flask backend server
+
 ├── train_model.py # Data cleaning, clustering & regression model training
+
 ├── requirements.txt # Required Python packages
+
 ├── data/
+
 │ └── weather.csv # Dataset (download from Kaggle)
+
 ├── models/
+
 │ ├── scaler.joblib
+
 │ ├── kmeans.joblib
+
 │ └── rf_regressor.joblib
+
 └── static/
+
 ├── index.html # Web dashboard
+
 ├── style.css # Styling
+
 └── app.js # Frontend logic (API calls + charts)
+
 
 
 ---
